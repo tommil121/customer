@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ShipNode="GSI-DC355" SCAC="UPS" CarrierServiceCode="GROUND" EnterpriseCode="DPH_CA" OrderNo="100847868310" ReleaseNo="1" DocumentType="0001" IsSingleOrder="Y" ActualShipmentDate="2020-02-10T14:32:38" file_name="OrderShipment_202081010450506.xml" MessageId="29240273" gsi_client_id="ELCNA" gsi_store_id="DPHCA" gsi_catalog_id="188">
+
+	<Containers>
+	
+	    <Container TrackingNo="1Z12341100847868310">
+	
+	       <!--Replace last digits with OMS order number  -->
+	
+	       <ContainerDetails>
+	
+	           <ContainerDetail Quantity="0">   <!-- Leave Quanity as Zero  -->
+	
+	               <Extn ExtnQuantity="1"/>
+	
+	               <!--Take teh line quantity from OMS -->
+	
+	               <!--PrimeLineNumber shoul;d be taken from OMS-->/
+	
+	               <ShipmentLine SubLineNo="1" ReleaseNo="1" Quantity="1" PrimeLineNo="2" OrderNo="100847868310" DocumentType="0001"/>
+	
+	           </ContainerDetail>
+	
+	       </ContainerDetails>
+	
+	    </Container>
+	
+	</Containers>
+	
+	<ShipmentLines>
+	
+	                <ShipmentLine SubLineNo="1" ReleaseNo="1" Quantity="1" PrimeLineNo="2" OrderNo="100847868310" DocumentType="0001"/>
+	
+	</ShipmentLines>
+
+</Shipment>

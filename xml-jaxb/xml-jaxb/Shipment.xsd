@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Shipment1" xmlns:tns="http://www.example.org/Shipment1" elementFormDefault="qualified">
+
+    
+    <complexType name="Shipment">
+    	<sequence>
+    		<element name="Containers" type="tns:Containers"></element>
+    		<element name="ShipmentLines" type="tns:ShipmentLines"></element>
+    	</sequence>
+    	<attribute name="ShipNode" type="string"></attribute>
+    	<attribute name="SCAC" type="string"></attribute>
+    	<attribute name="CarrierServiceCode" type="string"></attribute>
+    	<attribute name="EnterpriseCode" type="string"></attribute>
+    	<attribute name="OrderNo" type="string"></attribute>
+    	<attribute name="ReleaseNo" type="string"></attribute>
+    	<attribute name="DocumentType" type="string"></attribute>
+    	<attribute name="IsSingleOrder" type="string"></attribute>
+    	<attribute name="ActualShipmentDate" type="string"></attribute>
+    	<attribute name="file_name" type="string"></attribute>
+    	<attribute name="MessageId" type="string"></attribute>
+    	<attribute name="gsi_client_id" type="string"></attribute>
+    	<attribute name="gsi_store_id" type="string"></attribute>
+    	<attribute name="gsi_catalog_id" type="string"></attribute>
+    </complexType>
+
+    <complexType name="Containers">
+    	<sequence>
+    		<element name="Container" type="tns:Container"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Container">
+    	<sequence>
+    		<element name="ContainerDetails"
+    			type="tns:ContainerDetails">
+    		</element>
+    	</sequence>
+    	<attribute name="TrackingNo" type="string"></attribute>
+    </complexType>
+    
+    <complexType name="ContainerDetails">
+    	<sequence>
+    		<element name="ContainerDetail"
+    			type="tns:ContainerDetail">
+    		</element>
+    		<element name="ShipmentLine" type="tns:ShipmentLine"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ContainerDetail">
+    	<sequence>
+    		<element name="Extn" type="tns:Extn"></element>
+    	</sequence>
+    	<attribute name="Quantity" type="string"></attribute>
+    </complexType>
+    
+    <complexType name="Extn">
+    	<attribute name="ExtnQuantity" type="string"></attribute>
+    </complexType>
+
+    <complexType name="ShipmentLine">
+    	<attribute name="SubLineNo" type="string"></attribute>
+    	<attribute name="ReleaseNo" type="string"></attribute>
+    	<attribute name="Quantity" type="string"></attribute>
+    	<attribute name="NewAttribute" type="string"></attribute>
+    	<attribute name="PrimeLineNo" type="string"></attribute>
+    	<attribute name="OrderNo" type="string"></attribute>
+    	<attribute name="DocumentType" type="string"></attribute>
+    </complexType>
+
+    <complexType name="ShipmentLines">
+    	<sequence>
+    		<element name="ShipmentLine" type="tns:ShipmentLine"></element>
+    	</sequence>
+    </complexType>
+</schema>
